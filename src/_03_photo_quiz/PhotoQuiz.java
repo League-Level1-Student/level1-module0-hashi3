@@ -28,30 +28,62 @@ public class PhotoQuiz {
 		// “Copy Image Address”)
 
 		// 2. create a variable of type "Component" that will hold your image
+		
+		Component jama = createImage("https://usatftw.files.wordpress.com/2017/05/spongebob.jpg");
 
 		// 3. use the "createImage()" method below to initialize your Component
+		
 
 		// 4. add the image to the quiz window
-
+		quizWindow.add(jama);
 		// 5. call the pack() method on the quiz window
+		
+		quizWindow.pack();
 
 		// 6. ask a question that relates to the image
+	
+		String question = JOptionPane.showInputDialog("what is this show called");
 
 		// 7. print "CORRECT" if the user gave the right answer
+		
+		if(question.contentEquals("spongebob")) {
+			System.out.println("correct");
+		}
+		
+		else {
+			System.out.println("wrong!!");
+		}
+		
 
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
+		quizWindow.remove(jama);
+		
 
 		// 10. find another image and create it (might take more than one line
 		// of code)
+		Component hashi =createImage("https://i.redd.it/fkuv5l19gat21.jpg");
 
 		// 11. add the second image to the quiz window
+	quizWindow.add(hashi);
 
 		// 12. pack the quiz window
+		quizWindow.pack();
 
 		// 13. ask another question
+		
+		String Second = JOptionPane.showInputDialog("do you know this actor");
+		
+		if(Second.contentEquals("Dany Devito")) {
+			System.out.println("correct");
+		}
+		
+		else {
+			System.out.println("wrong!!");
+		}
+		
 
 		// 14+ check answer, say if correct or incorrect, etc.
 
