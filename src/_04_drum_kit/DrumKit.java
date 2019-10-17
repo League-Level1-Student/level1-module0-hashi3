@@ -22,6 +22,7 @@ import javax.swing.JPanel;
 public class DrumKit implements MouseListener {
 
 	JLabel drumLabelWithImage;
+	JLabel snareLabel;
 
 	public void run() throws MalformedURLException {
 
@@ -67,10 +68,10 @@ public class DrumKit implements MouseListener {
 
 		// 9. Edit the next line to use your String variable
 		 
-		JLabel drumLabelWithImage = createLabelImage(drum);
+		 drumLabelWithImage = createLabelImage(drum);
 		jpan.setLayout(new GridLayout());
 		
-		JLabel snareLabel = this.createLabelImage(snare);
+		snareLabel = this.createLabelImage(snare);
 		
 
 		// 10. Add the image to the panel
@@ -102,10 +103,10 @@ public class DrumKit implements MouseListener {
 
 		
 		JLabel drumClicked = (JLabel) e.getSource(); // This line gets the label
-		if(drumClicked.getName().equals("drumLabelWithImage")){
+		if(drumClicked == this.drumLabelWithImage){
 			playSound("drum.wav");
 		}
-		else if(drumClicked.getName().equals("snareLabel")) {
+		else if(drumClicked == this.snareLabel) {
 			playSound("cymbal.wav");
 		}
 		
